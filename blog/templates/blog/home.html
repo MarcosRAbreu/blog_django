@@ -2,10 +2,15 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8"
-        <title>title</title>
+        <title>Home</title>
     </head>
     <body>
-        <h1>Home</h1>
-        <h2>Hello word!!!</h2>
+        <h2>Lista de Posts...</h2>
+        <ul>
+            {% for post in posts %}
+            <a href="{% url 'post_detail' post.id %}"> {{post.titulo}} - {{post.autor}}</a>
+            <br>
+            {% endfor %}
+        </ul>
     </body>
 </html>
