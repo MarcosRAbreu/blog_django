@@ -21,3 +21,4 @@ media
 
 # Backup files # 
 *.bak
+static/*
